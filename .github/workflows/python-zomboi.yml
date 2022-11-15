@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Docker Build
-      run: docker build -t jonnyp/zomboi .
+      run: docker build -t crispiboi/zomboi .
     
     - name: Docker Login
       if: github.event_name != 'pull_request'
@@ -47,5 +47,5 @@ jobs:
     
     - name: Docker Push
       if: github.event_name != 'pull_request'
-      run: docker push jonnyp/zomboi:latest
+      run: docker push crispiboi/zomboi:latest
         
